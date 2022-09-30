@@ -1,4 +1,5 @@
 import React from 'react'
+import MenuBox from './Ex04Com/MenuBox'
 
 const Ex04 = () => {
 
@@ -31,8 +32,28 @@ const Ex04 = () => {
     // 버튼모양 [김치찌개] [비빔밥] [계란찜]
     // 단, 직접 적는 것 금지 map함수 이용
 
-    let lunch = ['김치찌개','비빔밥','계란찜']
-    let newLunch = lunch.map(item => <button class="w-btn w-btn-green" key={item}>{item}</button>)
+    let lunch = ['김치찌개','비빔밥','계란찜','파스타','연어']
+
+    const ck = (event) =>{
+        console.log(event.target.innerText)
+    }
+
+    let newLunch = lunch.map(item => <button onClick={ck} class="w-btn w-btn-green" key={item}>{item}</button>)
+
+    // 만약, 태그 대신 내가 만든 컴포넌트를 반복한다면?
+    let coffeeMenu = [{
+        menu : "아메리카노",
+        price : "3500원"
+    },  {menu : "카페라떼",
+        price : "4000원"
+    }, {menu : "돌체라떼",
+        price:"5000원"
+    }]
+
+    let renderMenu = coffeeMenu.map(item=>
+                        (<MenuBox key={item.menu} item={item}>
+                        </MenuBox>))
+
   return (
     <div>
         {group}
@@ -40,6 +61,8 @@ const Ex04 = () => {
         <br/>
         <h2>오늘 뭐 먹지?</h2><br/>
         {newLunch}
+        <hr></hr>
+        {renderMenu}
     </div>
   )
 }
