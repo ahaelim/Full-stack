@@ -7,6 +7,7 @@ import Ex05 from './Example/Ex05'
 import Ex06 from './Example/Ex06'
 import Ex07 from './Example/Ex07'
 import Ex08 from './Example/Ex08'
+import Ex09 from './Example/Ex09';
 function App() {
   
   return (
@@ -34,8 +35,10 @@ function App() {
       {/* <Ex07/> */}
 
       {/* ex08 : useEffect */}
-      <Ex08/>
+      {/* <Ex08/> */}
 
+      {/* ex09 : 영화데이터 리액트로 바꾸기! */}
+      <Ex09/>
 
     </div>
   );
