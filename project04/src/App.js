@@ -18,9 +18,14 @@ function App() {
             path(경로), element(컴포넌트) */}
           <Route path='/' element={<Main/>}></Route>
           <Route path='/about' element={<About/>}></Route>
-          <Route path='/mypage' element={<MyPage/>}></Route>
-          <Route path='/product' element={<Product/>}></Route>
 
+          {/* 로그인 상태에 따라 다르게 처리 */}
+          <Route path='/mypage' element={<MyPage/>}></Route>
+
+          {/* url 파라미터를 이용 useParams() */}
+          {/* :num => /product:1 , /product:2 .... */}
+          <Route path='/product:num' element={<Product/>}></Route>
+            
       </Routes>
     </div>
   );
