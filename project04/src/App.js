@@ -3,6 +3,8 @@ import {Routes, Route} from 'react-router-dom';
 
 import Main from './components/Main';
 import About from './components/About';
+import MyPage from './components/MyPage';
+import Product from './components/Product';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
             path(경로), element(컴포넌트) */}
           <Route path='/' element={<Main/>}></Route>
           <Route path='/about' element={<About/>}></Route>
+          <Route path='/mypage' element={<MyPage/>}></Route>
+          <Route path='/product' element={<Product/>}></Route>
 
       </Routes>
     </div>

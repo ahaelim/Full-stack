@@ -9,7 +9,9 @@ const Main = () => {
         - 브라우저 주소를 바꿔주는 역할
         - 실제로 페이지를 불러오지는 않는다(a태그와의 차이)
         */}
-        <Link to='./About'>About으로 이동</Link>
+        <Link to='./About'>About으로 이동</Link><br/>
+        <Link to='./MyPage'>마이페이지로 이동</Link><br/>
+        <Link to='./Product'>상품페이지로 이동</Link><br/>
     </div>
   )
 }
