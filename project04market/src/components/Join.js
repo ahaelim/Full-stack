@@ -1,4 +1,4 @@
-import React,{useRef, useState} from 'react'
+import React,{useEffect, useRef, useState} from 'react'
 
 const Join = () => {
 
@@ -8,7 +8,7 @@ const Join = () => {
         const nameRef = useRef()
         const seasonRef = useRef()
     const btnCk = () => {
-        alert(`${seasonRef.current.value}을 좋아하는 ${nameRef.current.value}님 환영합니다!`)
+        //alert(`${seasonRef.current.value}을 좋아하는 ${nameRef.current.value}님 환영합니다!`)
         
         setUserData({
             'id' : idRef.current.value,
@@ -19,12 +19,21 @@ const Join = () => {
 
         
     }
+
+    useEffect(()=>{
+        console.log('현재 data', userData)
+        // 여기서 backend 로 값을 보내주면 됨
+        // userData에 값이 비어있지 않은지 확인해주기
+        // 보통 중복확인할때 이용하기도 함 (백 가서 중복확인)
+        //userData.id !== undefined && alert(userData.id)
+    },[userData])
   return (
     <div>
         ID : <input type="text" 
         placeholder='ID를 입력하시오'
         ref = {idRef}
         ></input>
+        <button>아이디 중복확인</button>
         <br/>
         PW : <input type="password" placeholder='PW를 입력하시오' ref = {pwRef}></input>
         <br/>

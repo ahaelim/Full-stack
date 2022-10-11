@@ -9,14 +9,14 @@
 
 body {
     font-family: 'JSongMyung-Regular-KO';
-    text-align: center;
-    padding: 100px;
+    text-align: start;
+    padding: 50px;
     background: whitesmoke;
     display: table-cell;
 }
 
 button {
-    margin: 20px;
+    margin: 5px;
 }
 
 
